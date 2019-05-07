@@ -13,7 +13,7 @@ describe('Shipping controller', function () {
         }, 50)
       })
     })
-  })
+  }) 
 
   afterEach(function () {
     productService.getProductWeight.restore()
