@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: shipping-service-46
+  name: shipping-service-46
+  namespace: lab-cnb
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: shipping-service-46
+    spec:
+      containers:
+      - image: mycluster.icp:8500/lab-cnb/shipping-service-46:v1.0.1
+        name: shipping-service-46
+        ports:
+        - containerPort: 3001
+          protocol: TCP
